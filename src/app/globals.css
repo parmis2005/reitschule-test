@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-forest: #1e3a2b;
+  --color-forest-light: #335f47;
+  --color-forest-dark: #12261b;
+  --color-cream: #f8f4ea;
+  --color-cream-dark: #efe6d3;
+  --color-leather: #a9673a;
+  --color-leather-dark: #7c4a28;
+  --color-gold: #c6a15b;
+  --color-gold-light: #e0c489;
+  --color-charcoal: #201c16;
+  --color-ivory: #fffdf8;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-charcoal);
 }
 
 @theme inline {
+  --color-forest: var(--color-forest);
+  --color-forest-light: var(--color-forest-light);
+  --color-forest-dark: var(--color-forest-dark);
+  --color-cream: var(--color-cream);
+  --color-cream-dark: var(--color-cream-dark);
+  --color-leather: var(--color-leather);
+  --color-leather-dark: var(--color-leather-dark);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-charcoal: var(--color-charcoal);
+  --color-ivory: var(--color-ivory);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+/* Ken-Burns style slow zoom for hero / section background imagery */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate(-1%, -1%);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 18s ease-out forwards;
+}
+
+@keyframes fade-cross {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  8%,
+  25% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-3%, 4%) rotate(8deg) scale(1.06);
+  }
+}
+.animate-float-slow {
+  animation: float-slow 14s ease-in-out infinite;
+}
+
+@keyframes float-slow-reverse {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(3%, -4%) rotate(-6deg) scale(1.08);
+  }
+}
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 18s ease-in-out infinite;
+}
+
+.leaflet-container {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: var(--color-cream-dark) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem !important;
+  background: var(--color-ivory) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--color-ivory) !important;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
