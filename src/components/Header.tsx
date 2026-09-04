@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, PawPrint, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { navLinks, site } from "@/lib/data";
 
 export default function Header() {
@@ -38,11 +39,18 @@ export default function Header() {
           <motion.span
             whileHover={{ rotate: 25, scale: 1.08 }}
             transition={{ type: "spring", stiffness: 300, damping: 12 }}
-            className={`flex h-10 w-10 items-center justify-center rounded-full ${
-              solid ? "bg-forest" : "bg-white/15 backdrop-blur"
+            className={`flex h-14 w-14 items-center justify-center rounded-full shadow-sm ${
+              solid ? "bg-forest/95" : "bg-white/12 backdrop-blur-md"
             }`}
           >
-            <PawPrint className="h-5 w-5 text-gold-light" strokeWidth={1.75} />
+            <Image
+              src="/horse-logo-gold.png"
+              alt="Pferdelogo der Reitschule Sonnenhof"
+              width={42}
+              height={36}
+              priority
+              className="h-auto w-[2.625rem]"
+            />
           </motion.span>
           <span
             className={`font-display text-lg font-semibold tracking-tight ${
