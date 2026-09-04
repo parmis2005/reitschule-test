@@ -18,6 +18,13 @@ const trainerPortrait = unsplash("photo-1746540368676-3ea770f8b9e3"); // Reiteri
 
 export const heroVideos = ["/videos/hero-sunset.mp4", "/videos/hero-aerial.mp4"];
 
+const galleryTrainingHall = unsplash("photo-1553284965-83fd3e82fa5a"); // Reiterin trainiert in Halle
+const galleryGroundwork = unsplash("photo-1607622814075-e51df1bdc82f"); // Bodenarbeit mit Pferd
+const galleryRidingTrail = unsplash("photo-1730888286699-6a4325ba8f2d"); // Ausritt auf Waldweg
+const galleryGrooming = unsplash("photo-1553284965-83fd3e82fa5a"); // Pferdepflege/Fellpflege
+const galleryJumpingArena = unsplash("photo-1611003228941-98852ba62227"); // Springtraining in Arena
+const galleryPonies = unsplash("photo-1549144994-61f2d7b8a35b"); // Ponys auf Weide
+
 export const images = {
   heroSlides: [heroField, dressage, mistyPaddock],
   about: horseFace,
@@ -28,12 +35,12 @@ export const images = {
     "q=80&w=1800&auto=format&fit=crop"
   ),
   gallery: [
-    heroField,
-    showJump,
-    dressage,
-    horseFace,
-    mistyPaddock,
-    saddleTack,
+    galleryTrainingHall,
+    galleryGroundwork,
+    galleryRidingTrail,
+    galleryGrooming,
+    galleryJumpingArena,
+    galleryPonies,
   ],
   ctaBg: mistyPaddock,
 };

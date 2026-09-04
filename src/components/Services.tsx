@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  Sparkles,
   Award,
   PartyPopper,
   Home,
@@ -16,9 +15,10 @@ import { services } from "@/lib/data";
 import { images } from "@/lib/images";
 import ScrollReveal from "./ScrollReveal";
 import Blob from "./Blob";
+import { HorseIcon } from "./icons";
 
-const icons: Record<string, LucideIcon> = {
-  Sparkles,
+const icons: Record<string, LucideIcon | typeof HorseIcon> = {
+  Horse: HorseIcon,
   Award,
   PartyPopper,
   Home,

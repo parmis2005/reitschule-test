@@ -37,7 +37,7 @@ export const services = [
     title: "Reitunterricht",
     description:
       "Einzel- und Gruppenunterricht für Anfänger:innen bis Fortgeschrittene — vom ersten Sitz bis zum sicheren Springen und feiner Dressurarbeit.",
-    icon: "Sparkles",
+    icon: "Horse",
   },
   {
     title: "Beritt & Training",

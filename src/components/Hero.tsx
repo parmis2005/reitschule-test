@@ -113,25 +113,26 @@ export default function Hero() {
         className="pointer-events-none absolute bottom-[-8rem] left-[-6rem] h-[28rem] w-[28rem] rounded-full bg-leather/25 blur-[100px]"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 pt-32 pb-24 lg:px-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 pt-32 pb-24 text-center lg:px-8">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mb-5 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-gold-light"
+          className="mb-5 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-gold-light"
         >
           <span className="h-px w-8 bg-gold-light" />
           Reitschule &amp; Pferdepension
+          <span className="h-px w-8 bg-gold-light" />
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="max-w-3xl text-balance font-display text-5xl font-medium leading-[1.05] text-ivory sm:text-6xl lg:text-7xl"
+          className="max-w-2xl text-balance font-sans text-4xl font-semibold leading-[1.15] text-ivory sm:text-5xl lg:text-6xl"
         >
           Reiten lernen mit
-          <span className="italic text-gold-light"> Herz</span> &amp;
+          <span className="text-gold-light"> Herz</span> &amp;
           Pferdeverstand
         </motion.h1>
 
@@ -139,11 +140,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ivory/80"
+          className="mt-6 max-w-md text-balance text-base leading-relaxed text-ivory/80"
         >
-          Professioneller Reitunterricht, einfühlsamer Beritt und liebevolle
-          Pferdepension in familiärer Atmosphäre — für Einsteiger:innen und
-          ambitionierte Reiter:innen gleichermaßen.
+          Professioneller Reitunterricht und liebevolle Pferdepension in
+          familiärer Atmosphäre.
         </motion.p>
 
         <motion.div
