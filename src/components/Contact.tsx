@@ -80,7 +80,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="mt-10 h-56 overflow-hidden rounded-2xl ring-1 ring-ivory/10">
+              <div className="relative isolate mt-10 h-56 overflow-hidden rounded-2xl ring-1 ring-ivory/10">
                 <Map />
               </div>
             </div>
